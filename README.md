@@ -13,6 +13,6 @@ Le référentiel est organisé comme suit :
 - `tps/`: Ce répertoire contient le code des exercices.
 
 ## Comment utiliser ce référentiel
-- Clonez ce référentiel sur votre machine locale en utilisant la commande suivante : `git clone https://github.com/votre-utilisateur/nom-du-referentiel`
+- Clonez ce référentiel sur votre machine locale en utilisant la commande suivante : `https://github.com/yosagaf/developper-en-js.git`
 - Explorez les différents modules et ouvrez les fichiers JavaScript pour voir les exemples de code commentés.
 - Consultez les documents PDF pour des explications détaillées et des instructions supplémentaires.
