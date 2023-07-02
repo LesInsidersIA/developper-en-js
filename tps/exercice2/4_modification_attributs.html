@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Modification d'attributs</title>
+</head>
+<body>
+  <ul>
+    <li>Élément 1</li>
+    <li>Élément 2</li>
+    <li>Élément 3</li>
+    <li>Élément 4</li>
+    <li>Élément 5</li>
+  </ul>
+  <button id="gras-btn" onclick="modifierAttributGras()">Gras</button>
+
+  <script>
+    function modifierAttributGras() {
+      // Récupérer tous les éléments de la liste
+      var elements = document.querySelectorAll('li');
+      
+      // Parcourir les éléments et modifier leur attribut style.fontWeight
+      for (var i = 0; i < elements.length; i++) {
+        if (elements[i].style.fontWeight === 'bold') {
+          // Si l'attribut est en gras, le changer en normal
+          elements[i].style.fontWeight = 'normal';
+        } else {
+          // Sinon, le changer en gras
+          elements[i].style.fontWeight = 'bold';
+        }
+      }
+    }
+  </script>
+
+  <!--
+    Dans ce code, on créé une liste <ul> avec plusieurs éléments <li> à l'intérieur. 
+    On ajoute également ajouté un bouton avec l'identifiant "gras-btn" et l'attribut onclick pour appeler la fonction modifierAttributGras() lorsque le bouton est cliqué.
+    La fonction modifierAttributGras() récupère tous les éléments de la liste en utilisant document.querySelectorAll('li'). 
+    Ensuite, à l'aide d'une boucle, elle parcourt chaque élément de la liste et vérifie si son attribut style.fontWeight est actuellement "bold" ou "normal". 
+    Si l'attribut est "bold", elle le change en "normal" pour revenir au style normal. Sinon, elle le change en "bold" pour afficher le texte en gras.
+  -->
+</body>
+</html>

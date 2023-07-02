@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Déplacement d'images</title>
+  <style>
+    .container {
+      text-align: center;
+    }
+    img {
+      position: relative;
+      left: 0;
+    }
+    .buttons {
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img id="image" src="img/logo-js.png" alt="Image" />
+  </div>
+
+  <button type="button" id="gauche-btn" onclick="deplacerImage('gauche')">Gauche</button>
+  <button type="button" id="droite-btn" onclick="deplacerImage('droite')">Droite</button>
+
+  <script>
+    function deplacerImage(direction) {
+      // Récupérer l'élément de l'image
+      var image = document.getElementById('image');
+      // Récupérer la position actuelle de l'image (valeur numérique)
+      var currentPosition = parseInt(image.style.left) || 0;
+      // Définir le décalage de déplacement (en pixels)
+      var offset = 50;
+
+      if (direction === 'gauche') {
+        // Déplacer l'image vers la gauche en soustrayant le décalage de la position actuelle
+        image.style.left = currentPosition - offset + 'px';
+      } else if (direction === 'droite') {
+        // Déplacer l'image vers la droite en ajoutant le décalage à la position actuelle
+        image.style.left = currentPosition + offset + 'px';
+      }
+    }
+  </script>
+
+  <!--
+
+    Dans ce code, vous devrez remplacer "chemin/vers/votre/image.jpg" par le chemin d'accès réel vers l'image que vous souhaitez afficher.
+    L'image est placée à l'intérieur d'une <div> avec la classe "container" pour permettre un positionnement relatif. 
+    L'élément <img> est positionné absolument à l'intérieur de cette <div>. 
+    Les boutons "Gauche" et "Droite" ont des identifiants uniques et appellent la fonction deplacerImage() avec la direction correspondante lorsqu'ils sont cliqués.
+    La fonction deplacerImage(direction) récupère l'élément de l'image en utilisant document.getElementById('image'). 
+    Elle récupère également la position actuelle de l'image en utilisant parseInt(image.style.left) || 0. 
+    Si la direction est "gauche", elle soustrait le décalage de la position actuelle de l'image (currentPosition - offset). 
+    Si la direction est "droite", elle ajoute le décalage à la position actuelle de l'image (currentPosition + offset). 
+    La propriété style.left est ensuite utilisée pour modifier la position horizontale de l'image.
+    Vous pouvez voir l'image se déplacer horizontalement lorsque vous cliquez sur les boutons "Gauche" et "Droite". 
+    Assurez-vous d'inclure l'image réelle que vous souhaitez afficher en remplaçant "chemin/vers/votre/image.jpg" par le chemin d'accès correct.
+  -->
+</body>
+</html>
