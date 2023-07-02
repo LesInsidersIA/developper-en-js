@@ -59,4 +59,4 @@ Testez la fonction en comparant les deux premières notes de l'étudiant.
     - Utilisation de lodash pour mélanger les notes
     - Utilisez la fonction shuffle de lodash pour mélanger les notes de l'étudiant.
 
-8. Utilisez la command node `exercice.js` pour exécuter votre code.
+8. Utilisez la command `node exercice.js` pour exécuter votre code.
