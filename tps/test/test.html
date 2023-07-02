@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Exemple de bouton avec événement de clic</title>
+</head>
+<body>
+  <button>Click Me</button>
+  <img src="img/logo-api-and-you.svg" alt="Image originale">
+
+  <script>
+    let button = document.querySelector('button');
+    button.addEventListener('click', function() {
+        console.log('Le bouton a été cliqué');
+    });
+    
+    button.addEventListener('mouseover', function() {
+    console.log('La souris est passée sur le bouton');
+    });
+
+    button.addEventListener('mouseout', function() {
+        console.log('La souris est sortie du bouton');
+    });
+
+    button.addEventListener('focus', function() {
+        console.log('Le bouton a le focus');
+    });
+
+    button.addEventListener('blur', function() {
+        console.log('Le bouton a perdu le focus');
+    });
+
+    setTimeout(function() {
+    console.log('4 secondes se sont écoulées');
+    }, 4000);
+
+    setInterval(function() {
+        console.log('Une autre seconde s\'est écoulée');
+    }, 1000);
+
+
+    
+    let image = document.querySelector('img');
+
+    image.addEventListener('mouseover', function() {
+        image.src = 'img/logo-api-and-you-noir.png';
+    });
+
+    image.addEventListener('mouseout', function() {
+        image.src = "img/logo-api-and-you.svg";
+    });
+
+  </script>
+</body>
+</html>  

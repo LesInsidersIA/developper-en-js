@@ -1,0 +1,14 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "C:\\ProgramData\\Microsoft\\Windows\\Start Menu\\Programs\\Google Chrome.lnk",
+            "request": "launch",
+            "name": "Open exercice1.html",
+            "file": "c:\\Users\\YS\\Desktop\\DevelopperJS\\codes\\exercice1\\exercice1.html"
+        }
+    ]
+}

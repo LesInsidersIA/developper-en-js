@@ -1,0 +1,97 @@
+﻿/* Style global pour le corps du document */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+}
+
+/* Style du conteneur principal de la liste de tâches */
+#taskContainer {
+    box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.15);
+    padding: 25px;
+    background-color: #ffffff;
+    width: 400px;
+    border-radius: 15px;
+}
+
+/* Style du formulaire pour ajouter des tâches */
+#taskForm {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#quote {
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+  }
+  
+/* Style de l'input pour entrer une nouvelle tâche */
+#taskForm input {
+    width: 75%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Style du bouton pour ajouter une tâche */
+#taskForm button {
+    padding: 10px 20px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Style de la liste de tâches */
+#taskList {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style des éléments de liste individuels (tâches) */
+#taskList li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+/* Style du contenu de chaque tâche */
+#taskList li .task-content {
+    flex-grow: 1;
+}
+
+/* Style des contrôles de chaque tâche (checkbox et bouton de suppression) */
+#taskList li .task-controls {
+    display: flex;
+    align-items: center;
+}
+
+/* Style du bouton de suppression de chaque tâche */
+#taskList li button {
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+/* Style du contenu de la tâche lorsqu'elle est terminée */
+#taskList li .task-content.done {
+    text-decoration: line-through;
+    color: #888;
+}

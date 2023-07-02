@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestionnaire de tâches</title>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div id="taskContainer">
+        <h1>Gestionnaire de tâches</h1>
+        <h1>Avec JavaScript et Ajax</h1>
+
+        <!-- Ajout d'un paragraphe pour afficher une citation -->
+        <p id="quote"></p>
+
+        <!-- Le formulaire pour l'entrée des tâches -->
+        <form id="taskForm">
+            <input type="text" id="task-input" placeholder="Nouvelle tâche">
+            <button type="submit" id="add-task-button">Ajouter</button>
+        </form>
+
+        <!-- La liste pour afficher les tâches -->
+        <ul id="taskList"></ul>
+    </div>
+
+    <!-- Le script JavaScript qui gère la logique de l'application -->
+    <script src="js/app.js"></script>
+</body>
+</html>
