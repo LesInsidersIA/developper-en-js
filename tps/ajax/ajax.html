@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="demo">
+  <h2>L'objet XMLHttpRequest</h2>
+  <button type="button" onclick="loadDoc()">Change le contenu</button>
+</div>
+
+<script>
+    function loadDoc() {
+    // Crée une nouvelle instance de l'objet XMLHttpRequest
+    const xhttp = new XMLHttpRequest();
+
+    // Définit une fonction qui sera appelée lorsque la requête sera terminée
+    xhttp.onload = function() {
+        // Met à jour le contenu de l'élément 'demo' avec la réponse de la requête
+        document.getElementById("demo").innerHTML = this.responseText;
+    }
+
+    // Initialise une requête HTTP GET vers le fichier 'ajax_info.txt'
+    xhttp.open("GET", "ajax_info.txt");
+
+    // Envoie la requête au serveur
+    xhttp.send();
+    }
+</script>
+
+</body>
+</html>
