@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .myClass{
+            background-color: blue;
+            padding: 10px;
+        }
+
+        #myId{
+            background-color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <button id="monBouton">Clique moi</button>
+    <div id="myId">Bonjour le monde !</div>
+    <div class="myClass">Bonjour encore !</div>
+
+    <script>
+        let myBtn = document.getElementById('monBouton');
+        let monDivId = document.getElementById('myId')
+        let monDivClass = document.getElementsByClassName('myClass')
+
+        myBtn.addEventListener('click', function(){
+            monDivId.style.backgroundColor = "blue";
+            monDivClass[0].style.backgroundColor = "red";
+        });
+    </script>
+</body>
+</html>
