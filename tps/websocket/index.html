@@ -1,0 +1,40 @@
+<!-- index.html -->
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Communication bidirectionnelle avec WebSocket</title>
+</head>
+<body>
+  <h1>Communication bidirectionnelle avec WebSocket</h1>
+  
+  <label for="message">Message :</label>
+  <input type="text" id="message" required><br>
+  
+  <button onclick="envoyerMessage()">Envoyer</button>
+  
+  <script>
+    // Création d'une instance WebSocket et connexion au serveur WebSocket
+    const socket = new WebSocket('ws://localhost:8080');
+  
+    // Événement déclenché lorsque la connexion au serveur WebSocket est établie
+    socket.addEventListener('open', function (event) {
+      console.log('Connexion établie');
+    });
+  
+    // Événement déclenché lorsque le client reçoit un message du serveur
+    socket.addEventListener('message', function (event) {
+      console.log('Reçu du serveur :', event.data);
+    });
+  
+    // Fonction pour envoyer un message au serveur
+    function envoyerMessage() {
+      // Récupération de la valeur du champ de saisie pour le message
+      const message = document.getElementById('message').value;
+      
+      // Envoi du message au serveur
+      socket.send(message);
+    }
+  </script>
+</body>
+</html>
