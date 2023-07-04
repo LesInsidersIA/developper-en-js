@@ -1,5 +1,3 @@
-AJAX n'est pas un langage de programmation.
-
-AJAX est une technique permettant d'accéder aux serveurs web depuis une page web.
-
-AJAX signifie Asynchronous JavaScript And XML (JavaScript asynchrone et XML).
+AJAX n'est pas un langage de programmation. \n
+AJAX est une technique permettant d'accéder aux serveurs web depuis une page web. \n
+AJAX signifie Asynchronous JavaScript And XML (JavaScript asynchrone et XML). \n
