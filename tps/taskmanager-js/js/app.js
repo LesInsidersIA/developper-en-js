@@ -4,4 +4,4 @@ const addTaskButton = document.getElementById('add-task-button'); // Bouton d'aj
 const taskList = document.getElementById('taskList'); // Liste de tâches
 
 
-// A compléter
+// Compléter le code
