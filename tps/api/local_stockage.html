@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ajouter un joueur</title>
+  <script>
+    function ajouterJoueur() {
+      var nom = document.getElementById('nom').value;
+      
+      // Vérification du champ nom
+      if (nom === '') {
+        alert('Veuillez saisir un nom de joueur');
+        return;
+      }
+      
+      // Récupération des joueurs déjà enregistrés
+      var joueursExistants = JSON.parse(localStorage.getItem('joueurs')) || [];
+      
+      // Ajout du nouveau joueur à la liste
+      //joueursExistants.push(nom);
+      
+      // Sauvegarde de la liste mise à jour dans le stockage local
+      localStorage.setItem('joueurs', JSON.stringify(joueursExistants));
+      
+      alert('Joueur ajouté avec succès');
+      
+      // Affichage des joueurs
+      afficherJoueurs();
+      
+      // Réinitialisation du champ nom
+      document.getElementById('nom').value = '';
+    }
+    
+    function afficherJoueurs() {
+      var joueurs = JSON.parse(localStorage.getItem('joueurs')) || [];
+      var listeJoueurs = document.getElementById('liste-joueurs');
+      
+      // Effacer la liste précédente
+      listeJoueurs.innerHTML = '';
+      
+      // Ajouter chaque joueur à la liste
+      joueurs.forEach(function(joueur) {
+        var joueurElement = document.createElement('li');
+        joueurElement.textContent = joueur;
+        listeJoueurs.appendChild(joueurElement);
+      });
+    }
+  </script>
+</head>
+<body>
+  <h1>Ajouter un joueur</h1>
+  
+  <label for="nom">Nom du joueur :</label>
+  <input type="text" id="nom" required><br>
+  
+  <button onclick="ajouterJoueur()">Ajouter</button>
+  
+  <h2>Liste des joueurs :</h2>
+  <ul id="liste-joueurs"></ul>
+  
+  <script>
+    // Afficher les joueurs déjà enregistrés au chargement de la page
+    afficherJoueurs();
+  </script>
+</body>
+</html>
