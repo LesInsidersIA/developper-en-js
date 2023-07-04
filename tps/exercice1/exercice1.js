@@ -12,3 +12,5 @@ const rl = readline.createInterface({
 // Crée une interface de readline pour lire les entrées utilisateur
 
 // Demande le prénom de l'étudiant
+
+// Compléter le code
