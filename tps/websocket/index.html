@@ -36,5 +36,18 @@
       socket.send(message);
     }
   </script>
+
+  <!--
+    Ce code HTML crée une interface utilisateur avec un champ de saisie pour le message et un bouton pour l'envoyer. 
+    Lorsque le bouton est cliqué, la fonction envoyerMessage() est appelée.
+    Au chargement de la page, une instance WebSocket est créée et une connexion est établie avec le serveur WebSocket à l'adresse ws://localhost:8080. 
+    Lorsque la connexion est établie, l'événement open est déclenché et le message "Connexion établie" est affiché dans la console.
+    Lorsque le client reçoit un message du serveur, l'événement message est déclenché et le message reçu est affiché dans la console.
+    La fonction envoyerMessage() récupère la valeur du champ de saisie pour le message, puis envoie ce message au serveur via la connexion WebSocket établie.
+    Ainsi, ce code permet une communication bidirectionnelle entre le client (navigateur) et le serveur via WebSocket.
+
+    Assurez voir d'avoir installer ws avec : npm install ws
+    Pour exécuter le code en utilisant la commande : node server.js
+  -->
 </body>
 </html>
